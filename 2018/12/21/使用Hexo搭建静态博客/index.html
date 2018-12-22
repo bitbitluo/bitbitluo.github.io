@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="小木同学的博客">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="小木同学" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        使用Hexo搭建静态博客｜小木同学
+        
+    </title>
+
+    <link rel="canonical" href="http://bitbitluo.github.io/2018/12/21/使用Hexo搭建静态博客/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+    " data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    小木同学
+                </span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- /.container -->
+    </nav>
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+    //    var $body   = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+    
+        $toggle.addEventListener('click', handleMagic)
+        function handleMagic(e){
+            if ($navbar.className.indexOf('in') > 0) {
+            // CLOSE
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function(){
+                    // prevent frequently toggle
+                    if($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                },400)
+            }else{
+            // OPEN
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+    </script>
+    
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="https://dwz.cn/yjMbJ3Qr">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('https://dwz.cn/yjMbJ3Qr')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>使用Hexo搭建静态博客</h1>
+                    
+                    <span class="meta">
+                         作者 byteluo
+                        <span>
+                          日期 2018-12-21
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            使用Hexo搭建静态博客
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h2><p>Hexo 是一个快速、简洁且高效的博客框架。通过Hexo框架能够把我们Markdown语法完成的页面，生成静态博客。配合Github我们就可以部署自己的网站了，而且Hexo有很多好看的主题，省去很多不必要的麻烦。</p>
+<blockquote>
+<p>Hexo官方文档（中文）：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+</blockquote>
+<h2 id="安装相关的环境"><a href="#安装相关的环境" class="headerlink" title="安装相关的环境"></a>安装相关的环境</h2><p>我们要在我们的电脑上安装两个软件，一个是我们常用的Git、另外一是我们的node.js，git不用多说，代码托管的软件，node.js是Javascript的一种运行环境，通过node.js我们可以让Javascript不仅在浏览器中运行，还可以直接运行在服务器上。  </p>
+<blockquote>
+<p>git网址： <a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>node.js网址：  <a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></p>
+</blockquote>
+<p>输入以下两行命令确保git和node.js安装已经完成，注意node.js输入的是node：<br><img src="环境.png" alt=""></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在控制台输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>npm是node.js自带的包管理工具，因为node.js本身是一个很轻量级的工具，我们通过安装插件来使得它变得强大</p>
+<h2 id="创建一个博客"><a href="#创建一个博客" class="headerlink" title="创建一个博客"></a>创建一个博客</h2><blockquote>
+<p>我们这里假定你已经拥有了windows命令行相关的知识，如果你是电脑爱好者，可以百度搜索一些命令来完成文件的删除和复制等基础操作，这不是很难</p>
+</blockquote>
+<p>在控制台输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init &lt;博客名字&gt;</span><br><span class="line">cd &lt;博客名字&gt;</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>现在我们已经完成了博客的创建，我们在浏览器中输入:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">127.0.0.1:4000</span><br></pre></td></tr></table></figure></p>
+<p><img src="浏览器.png" alt=""></p>
+<blockquote>
+<p>你页面可能会和我的有些不一样，因为我是修改过主题的。</p>
+</blockquote>
+<p><strong>那我们刚刚是怎么做到的呢？</strong>  </p>
+<p><strong>hexo init &lt;博客名字&gt;</strong>    第一行帮助我们创建了我们的博客项目<br><strong>cd &lt;博客名字&gt;</strong>  第二行进入我们的博客<br><strong>npm install</strong> 第三行帮助我们安装相关的包依赖<br><strong>hexo s</strong> 第四行启动我们的服务  </p>
+<h2 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h2><h3 id="工具安装"><a href="#工具安装" class="headerlink" title="工具安装"></a><strong>工具安装</strong></h3><p>为了方便我们操作，我们需要下载些软件<br>第一个软件是vs code，它不同于visual studio，它是一个轻量级的编辑器，它速度快，方便，而且支持多个平台，我觉得它比sublime还好用二厘米，它的node.js插件是真的好用   </p>
+<blockquote>
+<p>vs code: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a>     </p>
+</blockquote>
+<p>我们还要安装一个插件，因为Hexo可能无法实时浏览我们的修改效果，这个我后面再讲，因为你不体会到麻烦，就不会知道这个插件有什么用。</p>
+<h3 id="项目目录结构讲解"><a href="#项目目录结构讲解" class="headerlink" title="项目目录结构讲解"></a><strong>项目目录结构讲解</strong></h3><p>我们把Hexo直接拖到vscode中来，下面开始讲解每个目录的功能<br><img src="目录结构.png" alt="">  </p>
+<p><strong>node_modules</strong><br>这个是模块目录，也就是相关的插件，我们一般不用关心，都是系统生成的。<br><strong>public</strong><br>我们生成的静态文件就存在在这里（这个是我们要关心的，我们如果要部署我们的网站到web服务器上时，直接把这个目录的文件拖过去就行了）<br><strong>source</strong><br>用来存在我们的资源文件（这个也是我们要关心的，我们在_posts写我们的markdown文件，然后使用 “hexo g” 命令，就可以生成静态页面<br><strong>_config.yml</strong><br>极为重要，这个文件是我们的配置文件，通过修改它，你可以修改一些全局的属性，比如网站的title</p>
+<h3 id="工作流程（重点"><a href="#工作流程（重点" class="headerlink" title="工作流程（重点)"></a><strong>工作流程（重点)</strong></h3><p>这一节很重要很重要，我们写博客是拿来用的，而不是摆着看的。所以我们先来了解一下Hexo的工作流程。<br>step 1:<br>使用markdown语法编写页面（使用hexo new &lt;页面名字&gt;命令，系统就直接在source/_posts文件下会生成了&lt;页面名字&gt;.md文件，我们在这里面编写就行了）</p>
+<blockquote>
+<p>markdown语法我们很容易通过百度学习</p>
+</blockquote>
+<p>step 2:<br>渲染，也就是前面说的使用 “ hexo g “ 在public下生成静态页面。</p>
+<p>step 3:<br>部署，将我们的页面部署到服务器上（我们可以使用 “ hexo s “ 命令在本地查看</p>
+<h3 id="Hexo-Browsersync插件"><a href="#Hexo-Browsersync插件" class="headerlink" title="Hexo-Browsersync插件"></a><strong>Hexo-Browsersync插件</strong></h3><p>使用几次上面的步骤，我们就可以理解Hexo的工作流程了。我相信你很快就会发现，每次我们修改或者增加一些东西，都得先把服务停下来（使用ctrl + c）这一点很麻烦，不过，幸运的是我们有插件。<br>进行项目目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-browsersync --save</span><br></pre></td></tr></table></figure>
+<p>启动服务<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
+<p><img src="启动项目.png" alt=""><br>出现这个页面就证明你成功了，不过要注意，我们访问网页的页网的端口号是4000不是3001</p>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a><strong>修改主题</strong></h3><p>好了，到这一步，相信你已经掌握了如何使用Hexo了，不过，你肯定不满足于官方的主题，你想大干一场    </p>
+<blockquote>
+<p>官方主题下载网址：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>    </p>
+</blockquote>
+<p>每个主题都有修改教程，我这里就不重复了。</p>
+<h2 id="解决Markdown图片问题"><a href="#解决Markdown图片问题" class="headerlink" title="解决Markdown图片问题"></a>解决Markdown图片问题</h2><p>我目前所知道的，一共有两种解决方案，第一种是通过七牛云构建图床，这个方法较为麻烦。第二种方法只要更改一个属性就可以了。我来讲第二种。<br>step1<br>打开_config文件，找到<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post_asset_folder: false</span><br></pre></td></tr></table></figure></p>
+<p>修改成true，以后你创建一个博客页面时，就会在目录下同时生成一个同名的资源文件，然后把你的图片放在这个文件夹下，使用时，直接按名字引用即可。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!()[资源文件名字.文件格式]</span><br></pre></td></tr></table></figure></p>
+<p><img src="资源文件.png" alt=""></p>
+<h2 id="使用Github-Pages（待更新）"><a href="#使用Github-Pages（待更新）" class="headerlink" title="使用Github Pages（待更新）"></a>使用Github Pages（待更新）</h2><p>接下来我们要把我们的静态博客发布到网上，我们有很多种解决方案，我们可以通过购买服务器，然后使用服务器上的web服务，不过，这里我推荐一种免费的方面，也就是Github pages，我们可以直接通过它来构建静态网站。</p>
+<blockquote>
+<p>Github pages官方链接：  <a href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com/</a>      </p>
+</blockquote>
+<h3 id="注册Github帐号"><a href="#注册Github帐号" class="headerlink" title="注册Github帐号"></a>注册Github帐号</h3><blockquote>
+<p>github网址：<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a>  </p>
+</blockquote>
+<p>首先我们要注册一个Github帐号，这个很简单。</p>
+<h3 id="新建一个仓库"><a href="#新建一个仓库" class="headerlink" title="新建一个仓库"></a>新建一个仓库</h3><p><img src="new.png" alt=""></p>
+<p>我们在github上新建一个仓库名字是&lt;你的用户名&gt;.github.io<br><img src="github.png" alt=""></p>
+<p>##使用讨论系统（待更新）</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/12/21/Handler源码分析/" data-toggle="tooltip" data-placement="top" title="Handle源码分析">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/11/12/Ubuntu界面的美化/" data-toggle="tooltip" data-placement="top" title="Ubuntu界面的美化">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Hexo"><span class="toc-text">什么是Hexo?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装相关的环境"><span class="toc-text">安装相关的环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个博客"><span class="toc-text">创建一个博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化设置"><span class="toc-text">个性化设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工具安装"><span class="toc-text">工具安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#项目目录结构讲解"><span class="toc-text">项目目录结构讲解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程（重点"><span class="toc-text">工作流程（重点)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-Browsersync插件"><span class="toc-text">Hexo-Browsersync插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改主题"><span class="toc-text">修改主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决Markdown图片问题"><span class="toc-text">解决Markdown图片问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Github-Pages（待更新）"><span class="toc-text">使用Github Pages（待更新）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册Github帐号"><span class="toc-text">注册Github帐号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建一个仓库"><span class="toc-text">新建一个仓库</span></a></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/bitbitluo">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/bitbitluo">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 小木同学 2018
+                    <!-- <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br> -->
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://bitbitluo.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="https://dwz.cn/2Q5G8weN">
+</body>
+
+</html>

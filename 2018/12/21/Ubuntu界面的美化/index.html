@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="小木同学的博客">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="小木同学" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Ubuntu界面的美化｜小木同学
+        
+    </title>
+
+    <link rel="canonical" href="http://bitbitluo.github.io/2018/12/21/Ubuntu界面的美化/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+    " data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    小木同学
+                </span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- /.container -->
+    </nav>
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+    //    var $body   = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+    
+        $toggle.addEventListener('click', handleMagic)
+        function handleMagic(e){
+            if ($navbar.className.indexOf('in') > 0) {
+            // CLOSE
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function(){
+                    // prevent frequently toggle
+                    if($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                },400)
+            }else{
+            // OPEN
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+    </script>
+    
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="https://dwz.cn/yjMbJ3Qr">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('https://dwz.cn/yjMbJ3Qr')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Ubuntu界面的美化</h1>
+                    
+                    <span class="meta">
+                         作者 byteluo
+                        <span>
+                          日期 2018-12-21
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Ubuntu界面的美化
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p><strong>效果图</strong>（这个是Ubuntu桌面，用了OSX的主题）<br><img src="p1.png" alt=""></p>
+<blockquote>
+<p>安装完Ubuntu后，第一件事一般就是更新软件源。然后就是开始折腾桌面环境，毕竟一个好的桌面环境，可以让人神清气爽，间接的就提高了工作效率。本文主要告诉你一些修改桌面环境的软件的使用方法，而不会手把手教你怎么把桌面环境和我折腾的一模一样，学会了方法，你们可以修改成自己想要的风格。</p>
+</blockquote>
+<p><br></p>
+<h2 id="１、软件安装"><a href="#１、软件安装" class="headerlink" title="１、软件安装"></a>１、软件安装</h2><p>首先我们要下载gnome-tweak-tool，它是一个图形化的界面管理工具<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ubuntu软件安装方法　</span><br><span class="line">sudo apt-get　install　&apos;你想要安装的软件&apos;;</span><br><span class="line">// 这里我们使用 sudo apt-get install gnome-tweak-tool</span><br></pre></td></tr></table></figure></p>
+<h2 id="2、自带的主题"><a href="#2、自带的主题" class="headerlink" title="2、自带的主题"></a>2、自带的主题</h2><p>软件安装完成以后可以打开软件列表(一般是按win键)，就可以找到我们的软件，中文名字叫做优化<br><img src="优化.png" alt=""></p>
+<p>我们可以使用它快速来更改我们的主题，图标和字体，你可以自己选择一下系统自带的主题界面试试效果，稍后我将教你怎么下载并安装第三方的主题界面。</p>
+<p>我想，当你尝试过一段时间gnome-tweak-tool（中文名：优化）后，你很快就会发现，他无法更改桌面windows任务栏一样的状态栏（它的名字叫Shell），和旁边那个装满图标的dock。</p>
+<p>Shell这东西默认情况上是灰色的（优化－外观－Shell），这个时候我们要下载程序gnome-shell-extensions，下载软件的方法我上面已经说过了。</p>
+<p>下载完成以后，我们再gnome-tweak-tool，选择Extension（扩展），你会发现这里比原来多了很多功能<br><img src="扩展.png" alt=""><br>把拓展打开（在左上角），然后打开User themes，这个时候gnome-tweak-tool的外观下的shell就可以打开了。你可以尝试的更改一下shell。</p>
+<p>接下来就是怎么更改dock，在Ubuntu的设置里面给我们提供了更改dock的功能，不过它的功能单一，我们这里使用另一个第三个软件，它叫Dash to Dock，这一次，我们不通过命令行获取，我们使用Ubuntu自带的商店下载<br><img src="dash.png" alt=""><br>那我们怎么调节dock呢，我们打开gnome-tweak-tool，选择Extension，接着我们就可以找到Dash to dock选项。<br><img src="扩展2.png" alt=""><br>注意：这里我们只要通过左边设置符号更改dock便好<br><strong>不要点开右边的圆角按钮</strong></p>
+<h2 id="3、第三方界面主题的安装"><a href="#3、第三方界面主题的安装" class="headerlink" title="3、第三方界面主题的安装"></a>3、第三方界面主题的安装</h2><p>我们可以在网上下载别人的第三方主题，这里给大家推荐一下网址<br><a href="https://www.opendesktop.org/" target="_blank" rel="noopener">https://www.opendesktop.org/</a></p>
+<p>上面主题一般都有自己的安装方法，你可以更改字体，主题，shell，应用图标，锁屏样式，总之Linux比Windows开放，所以桌面可以设计的特别特别好看。</p>
+<p>比如我们要下载第三方主题，我们只需要从网上下载相关的资源，然后移动到指定文件夹(主题是/usr/share/themes)，然后通过gnome-tweak-tool切换便可以了。</p>
+<p>###　在移动资源时，请使用cp或者mv命令，记得加sudo，因为需要获得管理员权限。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/12/21/使用hexo搭建自己的博客/" data-toggle="tooltip" data-placement="top" title="使用hexo搭建自己的博客">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/04/13/网易云评论精选/" data-toggle="tooltip" data-placement="top" title="网易云评论精选">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#１、软件安装"><span class="toc-text">１、软件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、自带的主题"><span class="toc-text">2、自带的主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、第三方界面主题的安装"><span class="toc-text">3、第三方界面主题的安装</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/bitbitluo">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/bitbitluo">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 小木同学 2018
+                    <!-- <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br> -->
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://bitbitluo.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="https://dwz.cn/2Q5G8weN">
+</body>
+
+</html>
